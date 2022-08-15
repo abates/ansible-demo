@@ -1,0 +1,17 @@
+---
+#        file: test.yml
+# description: Playbook to write some debug output showing that ansible
+#              is working
+
+- name: "10010 - GATHER FACTS"
+  hosts: "localhost"
+  tasks:
+    - gather_facts: {}
+
+- name: "10020 - DISPLAY FACTS"
+  hosts: "localhost"
+  tasks:
+    - debug:
+        var: ansible_facts
+
+
